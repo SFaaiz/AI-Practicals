@@ -282,3 +282,23 @@ public class Prac5 {
 }
 
 }
+
+
+
+/* Missionaries and Cannibals problem.
+
+Problem Statement:
+There are three missionaries and three cannibals on one side of a river. They need to cross to the other side of the river using a boat that 
+can carry at most two people. The boat cannot cross the river by itself and must have at least one person on board to operate it.
+
+The constraints are as follows:
+
+If missionaries are outnumbered by cannibals on either side of the river, the cannibals will eat the missionaries, resulting in an unsafe state.
+
+The boat can only carry a maximum of two people at a time.
+
+All people on the boat must be either missionaries or cannibals; it cannot be a mix of both.
+
+The boat must always have at least one person on board to operate it.
+
+    */
