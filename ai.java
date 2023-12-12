@@ -302,3 +302,59 @@ All people on the boat must be either missionaries or cannibals; it cannot be a 
 The boat must always have at least one person on board to operate it.
 
     */
+
+
+
+    public class WaterJugProblem {
+
+    public static void pour(int jug1, int jug2) {
+        int max1 = 3, max2 = 5, fill = 4;  // Change maximum capacity and final capacity
+        System.out.printf("%d\t%d\n", jug1, jug2);
+
+        if (jug2 == fill) {
+            return;
+        } else if (jug2 == max2) {
+            pour(0, jug1);
+        } else if (jug1 != 0 && jug2 == 0) {
+            pour(0, jug1);
+        } else if (jug1 == fill) {
+            pour(jug1, 0);
+        } else if (jug1 < max1) {
+            pour(max1, jug2);
+        } else if (jug1 < (max2 - jug2)) {
+            pour(0, (jug1 + jug2));
+        } else {
+            pour(jug1 - (max2 - jug2), (max2 - jug2) + jug2);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("JUG1\tJUG2");
+        pour(0, 0);
+    }
+}
+
+
+# Left-right associativity
+# 100 / 10 * 10 is calculated as
+# (100 / 10) * 10 and not
+# as 100 / (10 * 10)
+print(100 / 10 * 10)
+
+# Left-right associativity
+# 5 - 2 + 3 is calculated as
+# (5 - 2) + 3 and not
+# as 5 - (2 + 3)
+print(5 - 2 + 3)
+
+# left-right associativity
+print(5 - (2 + 3))
+
+# right-left associativity
+# 2 ** 3 ** 2 is calculated as
+# 2 ** (3 ** 2) and not
+# as (2 ** 3) ** 2
+print(2 ** 3 ** 2)
+# Distributive property
+# (4*23) - (4*7)
+print (4 * (23 - 7))
